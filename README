@@ -1,0 +1,22 @@
+Developed on Debian 8 (ehrm, raspbian, that is.)
+
+System packages needed:
+* python3
+* python3-dev
+* python-virtualenv
+* wiringpi - XXX this is the py2 package, use pip/virtualenv
+
+Then build a virtualenv:
+```
+virtualenv --python=`which python3` env
+source env/bin/activate
+pip install wiringpi
+```
+
+Connect wires:
+* red LED: GPIO 4
+* green LED: GPIO 17
+* Radiometrix TX High: GPIO 18
+* Radiometrix TX EN: GPIO 23
+* Radiometrix VCC (2.9V-15V): 5V or 3V, either works, pins 1,2,3
+* Radiometrix GND: any GND pin (i use 40)
